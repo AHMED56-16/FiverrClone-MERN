@@ -1,0 +1,141 @@
+.gigs {
+  width: 100%;
+  padding: 0 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .breadcrumbs {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #555;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      color: #999;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+
+      .left {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        input {
+          padding: 6px 10px;
+          border: 1px solid lightgrey;
+          border-radius: 5px;
+          min-width: 80px;
+        }
+
+        button {
+          padding: 6px 12px;
+          background-color: #1dbf73;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: background-color 0.2s ease;
+
+          &:hover {
+            background-color: #17a362;
+          }
+        }
+      }
+
+      .right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .sortBy {
+          font-weight: 300;
+          color: #555;
+        }
+
+        .sortType {
+          font-weight: 500;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+
+        .rightMenu {
+          position: absolute;
+          top: 30px;
+          right: 0;
+          background-color: #fff;
+          border: 1px solid lightgrey;
+          padding: 10px;
+          border-radius: 5px;
+          z-index: 9;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            cursor: pointer;
+            color: #555;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: #1dbf73;
+            }
+          }
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .gigs {
+    .container {
+      padding: 20px;
+
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .right {
+          align-self: flex-end;
+          margin-top: 10px;
+        }
+      }
+
+      .cards {
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  }
+}

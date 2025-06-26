@@ -1,0 +1,41 @@
+.trustedBy {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 20px;
+      font-weight: 600;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+
+      img {
+        height: 40px;
+        max-width: 100px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+
+        &:hover {
+          filter: none;
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+.slide {
+  padding: 50px 0;
+
+  .container {
+    max-width: 1536px;
+    padding: 0 20px;
+    position: relative;
+
+    .slideItem {
+      padding: 0 10px; 
+      box-sizing: border-box;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(206, 202, 202, 0.1);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .carousel-prev {
+      left: -10px;
+    }
+
+    .carousel-next {
+      right: -10px;
+    }
+  }
+}
