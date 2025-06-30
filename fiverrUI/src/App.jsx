@@ -16,6 +16,7 @@ import Footer from "./components/footer/Footer.jsx";
 import "./app.scss";
 import Login from "./pages/login/Login.jsx";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage.jsx";
+import Register from "./pages/register/Register.jsx";
 
 function App() {
   const Layout = () => (
@@ -45,6 +46,7 @@ function App() {
         { path: "/message/:id", element: <Message /> },
         { path: "/add", element: <Add /> },
         // { path: "/gig/:id", element: element: <Gig /> },
+        { path: "/register", element: <Register /> },
       ],
     },
     {
