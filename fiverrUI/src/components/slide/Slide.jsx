@@ -1,4 +1,3 @@
-// Slide.jsx
 import React, { useRef, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -11,10 +10,10 @@ const Slide = ({ children }) => {
 
   const [sliderRefInternal] = useKeenSlider(
     {
-      loop: false,
+      loop: false, 
       slides: {
         perView: 4,
-        spacing: 0, // We'll handle spacing with your CSS
+        spacing: 0, 
       },
       breakpoints: {
         "(max-width: 639px)": {

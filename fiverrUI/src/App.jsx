@@ -17,6 +17,7 @@ import "./app.scss";
 import Login from "./pages/login/Login.jsx";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage.jsx";
 import Register from "./pages/register/Register.jsx";
+import Gig from "./pages/gig/Gig.jsx";
 
 function App() {
   const Layout = () => (
@@ -45,7 +46,7 @@ function App() {
         { path: "/messages", element: <Messages /> },
         { path: "/message/:id", element: <Message /> },
         { path: "/add", element: <Add /> },
-        // { path: "/gig/:id", element: element: <Gig /> },
+        { path: "/gig/:id", element: <Gig /> },
         { path: "/register", element: <Register /> },
       ],
     },
