@@ -4,9 +4,14 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
+
 import Home from "./pages/home/Home.jsx";
 import Gigs from "./pages/gigs/Gigs.jsx";
-// import Gig from "./pages/gig/Gig.jsx";
 import Orders from "./pages/orders/Orders.jsx";
 import MyGigs from "./pages/myGigs/MyGigs.jsx";
 import Add from "./pages/add/Add.jsx";
@@ -20,17 +25,23 @@ import Register from "./pages/register/Register.jsx";
 import Gig from "./pages/gig/Gig.jsx";
 
 function App() {
+  const queryClient = new QueryClient()
+
   const Layout = () => (
     <div className="app">
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <QueryClientProvider client={queryClient}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </QueryClientProvider>
     </div>
   );
 
   const NoLayout = () => (
     <div className="app">
-      <Outlet />
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+      </QueryClientProvider>
     </div>
   );
 

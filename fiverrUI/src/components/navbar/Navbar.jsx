@@ -47,14 +47,14 @@ const navigate=useNavigate()
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign in</span>
+          <Link to="/login" className='link'>Sign in</Link>
 
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button onClick={() => { return navigate("/register") }}>Join</button>}
           {currentUser && (
             <div className="user" onClick={() => setOpen(!open)}>
               <img
-                src={currentUser.img || "./images/noavatar.jpg"}
+                src={currentUser.image || "./images/noavatar.jpg"}
                 alt="user"
               />
               <span>{currentUser.username}</span>
